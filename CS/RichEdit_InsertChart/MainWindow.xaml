@@ -1,0 +1,47 @@
+﻿<Window x:Class="RichEdit_InsertChart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        Title="MainWindow" Height="550" Width="800" 
+        xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
+        dx:ThemeManager.ThemeName="Office2007Blue" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon">
+    <Window.Resources>
+        <ResourceDictionary>
+            <dxre:RichEditUICommand x:Key="commands" />
+            <dxre:RichEditStringIdConverter x:Key="stringIdConverter" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <dxb:BarManager Name="barManager1" ToolbarGlyphSize="Small">
+            <dxb:BarManager.Items>
+                <dxre:InsertMergeFieldsBarSubItem Command="{Binding Path=MailMergeInsertFieldPlaceholder, Mode=OneTime, Source={StaticResource commands}}" Name="biMailMergeInsertFieldPlaceholder" RichEditControl="{Binding ElementName=richEditControl1}" />
+                <dxb:BarCheckItem Command="{Binding Path=MailMergeViewMergedData, Mode=OneTime, Source={StaticResource commands}}" Name="biMailMergeViewMergedData" />
+                <dxb:BarButtonItem Command="{Binding Path=MailMergeShowAllFieldCodes, Mode=OneTime, Source={StaticResource commands}}" Name="biMailMergeShowAllFieldCodes" />
+                <dxb:BarButtonItem Command="{Binding Path=MailMergeShowAllFieldResults, Mode=OneTime, Source={StaticResource commands}}" Name="biMailMergeShowAllFieldResults" />
+                <dxb:BarButtonItem Command="{Binding Path=FileNew, Mode=OneTime, Source={StaticResource commands}}" Name="biFileNew" />
+                <dxb:BarButtonItem Command="{Binding Path=FileOpen, Mode=OneTime, Source={StaticResource commands}}" Name="biFileOpen" />
+                <dxb:BarButtonItem Command="{Binding Path=FileSave, Mode=OneTime, Source={StaticResource commands}}" Name="biFileSave" />
+                <dxb:BarButtonItem Command="{Binding Path=FileSaveAs, Mode=OneTime, Source={StaticResource commands}}" Name="biFileSaveAs" />
+                <dxb:BarButtonItem Command="{Binding Path=FileQuickPrint, Mode=OneTime, Source={StaticResource commands}}" Name="biFileQuickPrint" />
+                <dxb:BarButtonItem Command="{Binding Path=FilePrint, Mode=OneTime, Source={StaticResource commands}}" Name="biFilePrint" />
+                <dxb:BarButtonItem Command="{Binding Path=FilePrintPreview, Mode=OneTime, Source={StaticResource commands}}" Name="biFilePrintPreview" />
+                <dxb:BarButtonItem Command="{Binding Path=EditUndo, Mode=OneTime, Source={StaticResource commands}}" Name="biEditUndo" />
+                <dxb:BarButtonItem Command="{Binding Path=EditRedo, Mode=OneTime, Source={StaticResource commands}}" Name="biEditRedo" />
+            </dxb:BarManager.Items>
+            <DockPanel>
+                <dxr:RibbonControl DockPanel.Dock="Top" Name="ribbonControl1">
+                    <dxr:RibbonDefaultPageCategory>
+                        <dxr:RibbonPage Caption="{Binding Source={StaticResource stringIdConverter}, ConverterParameter=Caption_PageMailings, Converter={StaticResource stringIdConverter}, Mode=OneTime}" Name="pageMailings">
+                            <dxr:RibbonPageGroup Caption="{Binding Source={StaticResource stringIdConverter}, ConverterParameter=Caption_GroupPreviewResults, Converter={StaticResource stringIdConverter}, Mode=OneTime}" Name="grpPreviewResults" ShowCaptionButton="False">
+                                <dxb:BarCheckItemLink BarItemName="biMailMergeViewMergedData" />
+                                <dxb:BarButtonItemLink BarItemName="biMailMergeShowAllFieldCodes" />
+                                <dxb:BarButtonItemLink BarItemName="biMailMergeShowAllFieldResults" />
+                            </dxr:RibbonPageGroup>
+                        </dxr:RibbonPage>
+                    </dxr:RibbonDefaultPageCategory>
+                </dxr:RibbonControl>
+                <dxre:RichEditControl Name="richEditControl1" BarManager="{Binding ElementName=barManager1, Mode=OneTime}" Ribbon="{Binding ElementName=ribbonControl1, Mode=OneTime}" CalculateDocumentVariable="richEditControl1_CalculateDocumentVariable" />
+            </DockPanel>
+        </dxb:BarManager>
+    </Grid>
+</Window>
