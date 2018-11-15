@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [ChartImage.cs](./CS/RichEdit_InsertChart/ChartImage.cs) (VB: [ChartImage.vb](./VB/RichEdit_InsertChart/ChartImage.vb))
+* [MainWindow.xaml](./CS/RichEdit_InsertChart/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/RichEdit_InsertChart/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/RichEdit_InsertChart/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/RichEdit_InsertChart/MainWindow.xaml))
+<!-- default file list end -->
 # How to embed a live chart into a document using a DOCVARIABLE field
 
 
