@@ -3,18 +3,23 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E3914)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# Rich Text Editor for WPF - How to Use a DOCVARIABLE field to Embed a Live Chart into a Document
+
+This example shows how to use a [DOCVARIABLE](https://docs.devexpress.com/WindowsForms/9721/controls-and-libraries/rich-text-editor/fields/field-codes/docvariable) field with custom parameters to embed a live chart into a document.
+
+![image](./media/d0468155-e2b4-11e4-80bf-00155d62480c.png)
+
+## Files to Review
 
 * [ChartImage.cs](./CS/RichEdit_InsertChart/ChartImage.cs) (VB: [ChartImage.vb](./VB/RichEdit_InsertChart/ChartImage.vb))
 * [MainWindow.xaml](./CS/RichEdit_InsertChart/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/RichEdit_InsertChart/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/RichEdit_InsertChart/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/RichEdit_InsertChart/MainWindow.xaml))
-<!-- default file list end -->
-# How to embed a live chart into a document using a DOCVARIABLE field
 
+## More Examples
 
-<p>This example shows how to embed a live chart into a document using a <a href="http://documentation.devexpress.com/#WindowsForms/CustomDocument9721"><u>DOCVARIABLE</u></a> field with custom parameters.<br /><br /><img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-embed-a-live-chart-into-a-document-using-a-docvariable-field-e3914/14.2.3+/media/d0468155-e2b4-11e4-80bf-00155d62480c.png"></p>
+* [How to Use Document Variable (DOCVARIABLE) Fields to Insert Dynamic Content](https://github.com/DevExpress-Examples/how-to-use-docvariable-fields)
 
-<br/>
+## Dcoumentation
 
-
+* [How to: Insert Dynamic Content](https://docs.devexpress.com/WindowsForms/401204/controls-and-libraries/rich-text-editor/examples/automation/how-to-insert-dynamic-content)
