@@ -25,7 +25,7 @@ This example shows how to use a [DOCVARIABLE](https://docs.devexpress.com/Window
 
 * [How to: Insert Dynamic Content](https://docs.devexpress.com/WindowsForms/401204/controls-and-libraries/rich-text-editor/examples/automation/how-to-insert-dynamic-content)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-richedit-embed-a-live-chart-into-a-document&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-richedit-embed-a-live-chart-into-a-document&~~~was_helpful=no)
 
